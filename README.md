@@ -12,7 +12,7 @@ The purpose of this practical is to introduce you to a GIT/GITHUB workflow that 
 
 
 ##Cloud 9 Setup
- - Everyone should have now been emailed a [cloud9.id](https://c9.io/) invite. 
+ - Everyone should have now been emailed a [cloud9.io](https://c9.io/) invite. 
  - Create a new **private** HTML5 workspace. 
  - GIT will already be installed for you.
 
@@ -47,64 +47,62 @@ You can check your configuration with:
 
 ###Download the stater project
 
-
-
-
-
-
-##Form Teams 
-
-
-- Nominate a team leader **you can form one group or use smaller sub groups**. Ideally the team leader would have used git and gitHub before
-
-- [The team leader needs to download my starter project](https://github.com/joeappleton18/rotterdamtravelguide/archive/master.zip)
-
+- [Download the starter project by clicking this link](https://github.com/joeappleton18/git_tut/archive/master.zip) 
 - The downloaded zip file needs to be unzipped
 
-- Next, the team leader should navigate to the decompressed folder
 
-  - Navigate on command line to where you want to work:  (using terminal or gitBash) 
+![](assets/file_tree.png)
+>> Dragging files/folder into the file tree area will upload to your workspace 
+ 
 
-		```
-		cd   <directory name>    //to change directory 
-		cd    ..      //to move up one directory 
-		
-		```  
+- If you're using cloud9, upload the unzipped folder to your workspace by dragging the folder into your workspace file tree
+
+###Initiating a git repository 
+
+- Navigate on command line to where your work is stored
+	
+	```
+	cd   <directory name>    //to change directory 
+	cd    ..      //to move up one directory 
+	
+	```  
+   	**or**
+   	
+   	- Using cloud9, right click on the file tree folder and then select open terminal
+
    	**or**
    			
-   You can type `cd` then drag the folder into the terminal/gitBash window. 
+   - Using terminal/bash you can type `cd` then drag the folder into the terminal/gitBash window
    
- - Next, the team leader must create a new repository: 
+   
+- Next create a new repository  
 
- ```
-    git init 
-    git add -A
-    git commit -m "initial commit"
- ```  
+```
+git init 
+git add -A
+git commit -m "initial commit"
+```  
+ 
+ - Type `git status` and check that your working directory is clean 
+   
+ 
+#The Task 
 
-- The team leader should then create a new repository on `gitHub`. GitHub hub will provide instructions on how to add an existing project. 
+The goal of this task is to practice the workflow that you'll use for your assignment. 
 
-- The team leader should grant access to the repository to everyone else in the team. This can be done from the repository settings  
-![](assets/git_setting.jpg)
+As you can see, the starter project is a global travel guide, which currently only has one location. Your task is to add a new location.
 
 
-- Everyone in the team should then clone the repository to their local computer. 
-
-- ![](assets/clone.jpg) 
->> get the repository address by pressing the clone button 
-
-  - Type `git clone <projectadress>` and press enter 
-  - A new folder called `rotterdamtravelguide` should be created containing the starter project.
-  - Type `cd rotterdamtravelguide` and press enter in order to navigate into that project folder. 
+   
+>> TIP: In cloud 9, you can right click on any HTML file and press run. This allows you to preview the file in your browser. 
   
 
- 
- #The Task 
- 
-  
- - As a team pick out one attraction each to write about. This can be anything that takes their fancy. 
+###Create a new branch 
 
- - Each team member should then create a new branch, so they can work on their attraction in isolation. To create a new branch type:
+Currently, you're working on the master branch. This should always contain a stable version of your work.  
+
+Your development work should therefore be done on feature branch. Think of a new location you would like to add and then create a feature branch to allow you to develop that location
+
 
  ```
    git checkout -b "branch_name"
@@ -112,51 +110,72 @@ You can check your configuration with:
  ```
  >> Note, branch names can not contain spaces.
  
+
  - This will create a new branch and switch to it. If you type  `git branch` you should see you are on your relevant branch 
 
- - Updated the html pages relating to your chosen attraction.  
+ 
+ - Updated the html pages relating to your chosen attraction.  You should add some images and grab a description off wikipedia. 
+ 
  	- Commit regularly 
  	
  	```
  	  git add -A
  	  git commit -m "this is a commit message"
  	```
+ 	
+ 	- Use the `git status` command to check that your working directory is clean 
 
    - If you make a mistake:
-
+	
    ```
     git reset --hard
    		
    ```
    >> resets the head to the last commit 
    
- #Pull requests 
+- You can use the `git log` to look at your historic commits
+
+- When you've completed your feature, `git log` to ensure the working directory is clean 
+- Next, checkout your master branch and merge in your feature brnach 
+
+```
+ git checkout master 
+ git merge `<the name of your feature branch >`
+```
+
+- Since your feature is now in master, you can now merge delete your feature branch. 
+
+```
+git branch -d `<the name of your feature branch>` 
+```
+
+#Storing your work on GITHUB 
+
+- Add the end of each coding session you should push your work to a gitHub repository 
+
+- Create a new repository on GitHub. To avoid errors, do not initialise the new repository with README, license, or gitignore files. 
+  
+- GitHub will then give you instruction on how to set up a remote and push your work to gitHub.   
+  
+  
+ - Once the remote is set up, you'll be able to push your work to gitHub using `git push origin master`   
    
- - When each team member feels they has finished their section they should push their features branch to the github origin  origin 
-
-
+ 
+ 
+ - **Note,**  often you'll want to push features branches to gitHub. You can do this using:
+ 
  ```
    git push --set-upstream origin <the name of your branch>	
 ```
 
-- The team member should then locate their branch on gitHub and raise a pull request.
-
-- If the team leader is happy with the pull request, he should merge it into the project.
-
-- The team member should switch back to the master branch and pull the latest changes:
-
-``` 
-git checkout master
-git pull origin master
-
-```
+- Once the feature branch is set up you can omit --set-upstream
 
 
 
 
 **If we have time**
 
-Not only is gitHub great for collaborating, they'll also host your website for free!
+Not only is gitHub great for collaborating and storing work, they'll also host your website for free!
 
 - Publish you website using gitHubPages 
 
@@ -170,15 +189,12 @@ Not only is gitHub great for collaborating, they'll also host your website for f
 
 - Checkout your project master branch 
 
-`git ceckout master`
+`git checkout master`
 
-- Ensure you have the latest change 
-
-`git pull origin master`
 
 - Push your work to the repository that will host your website:
 
-`git push origin master`
+`git push website master`
 
 
 - Your website can be found at `<username>.github.io`
