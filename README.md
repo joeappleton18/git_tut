@@ -8,7 +8,7 @@ The purpose of this practical is to introduce you to a GIT/GITHUB workflow that 
 
 ##Your own computer 
 
-- If you're using a lap to you'll need to [install git](https://sirus21.gitbooks.io/cda401/content/sessions/session5/how_to_install_git.html) 
+- If you're using your own computer you'll need to [install git](https://sirus21.gitbooks.io/cda401/content/sessions/session5/how_to_install_git.html) 
 
 
 ##Cloud 9 Setup
