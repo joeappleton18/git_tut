@@ -33,7 +33,7 @@ From within a terminal window:
 
 ```
 git config --global user.name "Your github user name"
-git config --global user.email you@yourdomain.com
+git config --global user.email "you@yourdomain.com"
 ```
 
 **You can check your config with**
