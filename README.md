@@ -1,23 +1,23 @@
-#GIT/GITHub Workflow
+# GIT/GITHub Workflow
 
-The purpose of this practical is to introduce you to a GIT/GITHUB workflow that we'll be using for the [assignment](http://learn.solent.ac.uk/pluginfile.php/894918/mod_resource/content/2/CDA401_Client_Side_Scripting_Assessment_1_.pdf). 
-
-
-#1) Setup
+The purpose of this practical is to introduce you to a GIT/GITHUB workflow that we'll be using for the [assignment
 
 
-##Your own computer 
+# 1) Setup
+
+
+## Your own computer 
 
 - If you're using your own computer you'll need to [install git](https://sirus21.gitbooks.io/cda401/content/sessions/session5/how_to_install_git.html) 
 
 
-##Cloud 9 Setup
+## Cloud 9 Setup
  - Everyone should have now been emailed a [cloud9.io](https://c9.io/) invite. 
  - Create a new **private** HTML5 workspace. 
  - GIT will already be installed for you.
 
  
-##GITHub Setup 
+## GITHub Setup 
 
 - If you don't already have one, set up a new [GITHUB](http://www.github.com) account. You should use your university email.
 - Make sure you activate your [https://education.github.com/pack](https://education.github.com/pack). This will get you lots of free extras.
@@ -29,7 +29,7 @@ The purpose of this practical is to introduce you to a GIT/GITHUB workflow that 
 From within a terminal window:
 
 
-###Set up your user details 
+### Set up your user details 
 
 ```
 git config --global user.name "Your github user name"
@@ -42,10 +42,7 @@ You can check your configuration with:
 
 ``git config --list``
 
-
-
-
-###Download the stater project
+### Download the stater project
 
 - [Download the starter project by clicking this link](https://github.com/joeappleton18/git_tut/archive/master.zip) 
 - The downloaded zip file needs to be unzipped
@@ -57,7 +54,7 @@ You can check your configuration with:
 
 - If you're using cloud9, upload the unzipped folder to your workspace by dragging the folder into your workspace file tree
 
-###Initiating a git repository 
+### Initiating a git repository 
 
 - Navigate on command line to where your work is stored
 	
@@ -86,7 +83,7 @@ git commit -m "initial commit"
  - Type `git status` and check that your working directory is clean 
    
  
-#The Task 
+# The Task 
 
 The goal of this task is to practice the workflow that you'll use for your assignment. 
 
@@ -97,7 +94,7 @@ As you can see, the starter project is a global travel guide, which currently on
 >> TIP: In cloud 9, you can right click on any HTML file and press run. This allows you to preview the file in your browser. 
   
 
-###Create a new branch 
+### Create a new branch 
 
 Currently, you're working on the master branch. This should always contain a stable version of your work.  
 
