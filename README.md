@@ -146,7 +146,7 @@ Your development work should therefore be done on feature branch. Think of a new
 git branch -d `<the name of your feature branch>` 
 ```
 
-#Storing your work on GITHUB 
+# Storing your work on GITHUB 
 
 - Add the end of each coding session you should push your work to a gitHub repository 
 
